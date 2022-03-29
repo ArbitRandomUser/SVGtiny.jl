@@ -1,6 +1,7 @@
 julia bindings to libsvgtiny
 primarily written so that i can get svg's into Luxor.
 you will need to have `libsvgtiny` installed. 
+http://www.netsurf-browser.org/projects/libsvgtiny/
 
 
 
