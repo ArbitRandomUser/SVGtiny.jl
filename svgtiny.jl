@@ -61,6 +61,13 @@ end
 
 const svgtiny_TRANSPARENT = 0x01000000
 
+"""
+    function run_luxor_instruction(segment::Array)
+
+segment is an array of the form [s::Symbol,f1::float,f2::float...]
+eval(s) should return a luxor function, and f1,f2.. are the args passed
+to eval(s) to be run, make sure Luxor is imported for eval to work.
+"""
 function run_luxor_drawsegment(segment::Array)
     if isempty(segment)
         return
