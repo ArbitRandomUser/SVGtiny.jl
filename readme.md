@@ -1,11 +1,10 @@
-julia bindings to libsvgtiny
-primarily written so that i can get svg's into Luxor.
-you will need to have `libsvgtiny` installed. 
+Julia bindings to libsvgtiny.
+Primarily written so that i can get svg's into Luxor.
+You will need to have `libsvgtiny` installed. 
+
 http://www.netsurf-browser.org/projects/libsvgtiny/
 
-
-
-more documentation incoming,
+More documentation and functionality (might be) incoming,
 for now one function is exported ...
 drawsvg(fname::String) , which draws an svg by the filename
 fname into the current Luxor Drawing. 
