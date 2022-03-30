@@ -20,5 +20,4 @@ drawsvg("tiger.svg")
 finish()
 preview()
 ```
-
-![tiger](https://user-images.githubusercontent.com/58146965/160720532-489f2660-76d4-468d-b362-6042761de120.png)
+![tiger](https://user-images.githubusercontent.com/58146965/160806316-152cca10-25d3-44bc-a31c-641beb2c3f12.png)
