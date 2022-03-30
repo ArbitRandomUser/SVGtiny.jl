@@ -90,9 +90,9 @@ function getcolor(num::Number)
     bytes[1]/255,bytes[2]/255,bytes[3]/255
 end
 
-function drawsvg(fname::String,action=:none)
+function drawsvg(fname::String,width=1000,height=1000,action=:none)
     diag = svgtiny_create()
-    svgtiny_parse(diag,read(fname),length(read(fname)),fname,1000,1000)
+    svgtiny_parse(diag,read(fname),length(read(fname)),fname,width,height)
     diagjl = unsafe_load(diag)
     shapes = unsafe_wrap(Array,diagjl.shape,diagjl.shape_count,own=true)
 
@@ -124,6 +124,7 @@ function drawsvg(fname::String,action=:none)
         end
         if shape.stroke!=svgtiny_TRANSPARENT && action==:none
             sethue(getcolor(shape.stroke))
+            setline(shape.stroke_width)
             strokepreserve()
         end
         if shape.fill!=svgtiny_TRANSPARENT && action==:none
